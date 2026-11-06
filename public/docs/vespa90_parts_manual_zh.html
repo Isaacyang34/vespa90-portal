@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vespa 90 (V9A1T) 原廠零件手冊繁體中文全譯本</title>
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --card-bg: #111827;
+      --border: #1f2937;
+      --text: #f3f4f6;
+      --text-muted: #9ca3af;
+      --accent: #f59e0b;
+      --accent-light: #fbbf24;
+      --code-bg: #1e293b;
+      --table-stripe: #131d31;
+      --table-hover: #1e293b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 32px 16px;
+    }
+    .container {
+      max-width: 1040px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    }
+    h1 {
+      font-size: 2rem;
+      color: #fff;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    h2 {
+      font-size: 1.45rem;
+      color: var(--accent-light);
+      margin-top: 36px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    h3 {
+      font-size: 1.15rem;
+      color: #38bdf8;
+      margin-top: 24px;
+      margin-bottom: 12px;
+    }
+    p { margin-bottom: 14px; color: #d1d5db; }
+    blockquote {
+      background: #172033;
+      border-left: 4px solid var(--accent);
+      padding: 14px 18px;
+      margin: 18px 0;
+      border-radius: 0 10px 10px 0;
+      color: #e2e8f0;
+      font-size: 0.95rem;
+    }
+    hr {
+      border: 0;
+      height: 1px;
+      background: var(--border);
+      margin: 32px 0;
+    }
+    code {
+      background: var(--code-bg);
+      color: #fbbf24;
+      padding: 2px 6px;
+      border-radius: 5px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.88em;
+      border: 1px solid #334155;
+    }
+    ul { margin-left: 24px; margin-bottom: 16px; }
+    li { margin-bottom: 6px; color: #cbd5e1; }
+    .num-item { margin-bottom: 8px; color: #cbd5e1; padding-left: 8px; }
+    .table-container {
+      overflow-x: auto;
+      margin: 18px 0 28px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    table.parts-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      text-align: left;
+    }
+    table.parts-table th {
+      background: #17223b;
+      color: #94a3b8;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+      padding: 12px 14px;
+      border-bottom: 2px solid var(--border);
+      white-space: nowrap;
+    }
+    table.parts-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #1f293d;
+      color: #e2e8f0;
+    }
+    table.parts-table tbody tr:nth-child(even) {
+      background: var(--table-stripe);
+    }
+    table.parts-table tbody tr:hover {
+      background: var(--table-hover);
+    }
+    .toolbar {
+      background: #172033;
+      padding: 14px 20px;
+      border-radius: 12px;
+      margin-bottom: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      border: 1px solid var(--border);
+    }
+    .search-input {
+      background: var(--bg);
+      border: 1px solid #334155;
+      padding: 8px 14px;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 0.88rem;
+      width: 280px;
+      max-width: 100%;
+    }
+    .print-btn {
+      background: var(--accent);
+      color: #0b0f19;
+      font-weight: bold;
+      border: 0;
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      transition: background 0.2s;
+    }
+    .print-btn:hover {
+      background: var(--accent-light);
+    }
+    @media print {
+      body { background: #fff; color: #000; padding: 0; }
+      .container { border: none; box-shadow: none; padding: 0; max-width: 100%; background: #fff; }
+      .toolbar { display: none; }
+      h1, h2, h3 { color: #000; border-bottom-color: #ccc; }
+      blockquote { background: #f8f8f8; border-left-color: #333; color: #333; }
+      table.parts-table th { background: #eee; color: #000; border-bottom: 2px solid #333; }
+      table.parts-table td { color: #111; border-bottom: 1px solid #ddd; }
+      table.parts-table tbody tr:nth-child(even) { background: #fbfbfb; }
+      code { background: #eee; color: #000; border: 1px solid #ccc; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="toolbar">
+      <div>
+        <span style="font-weight: bold; color: var(--accent);">🛵 Vespa 90 (V9A1T) 原廠零件手冊中文版</span>
+        <span style="font-size: 0.8rem; color: #94a3b8; margin-left: 8px;">獨立離線 HTML 格式</span>
+      </div>
+      <div style="display: flex; gap: 8px;">
+        <input type="text" id="searchBox" class="search-input" placeholder="搜尋圖號、中文零件或料號..." oninput="filterTable()" />
+        <button class="print-btn" onclick="window.print()">列印 / 存為 PDF</button>
+      </div>
+    </div>
+    
+    <h1 id="top">Vespa 50 / 50S / 90 (V9A1T) 原廠備件手冊繁體中文全譯本</h1>
+<blockquote><strong>文件來源</strong>：Piaggio 原廠備件目錄手冊掃描檔 (<code>V5A1T.V5SA1T.V9A1T.r.pdf</code>，共 37 頁)</blockquote>
+<blockquote><strong>適用車型</strong>：</blockquote>
+<blockquote>- <strong>Vespa 90</strong>：車架代號 <code>V9A1T</code>、引擎代號 <code>V9A1M</code> (88.5 cc)</blockquote>
+<blockquote>- <strong>Vespa 50</strong>：車架代號 <code>V5A1T</code>、引擎代號 <code>V5A1M</code> (49.7 cc)</blockquote>
+<blockquote>- <strong>Vespa 50 S</strong>：車架代號 <code>V5SA1T</code>、引擎代號 <code>V5SA1M</code> (外銷高速版)</blockquote>
+<hr/>
+<h2 id="第一部分手冊使用須知與規章NoticeInstrucciones">📖 第一部分：手冊使用須知與規章 (Notice - Instrucciones)</h2>
+<blockquote>對應原廠手冊第 2 頁 (Page 2)</blockquote>
+<h3 id="1手冊編排說明">1. 手冊編排說明</h3>
+<div class="num-item"><strong>•</strong> <strong>收錄範圍</strong>：本手冊收錄上述三款車型之全車原廠供應備用零件（包含引擎、傳動、底盤、車體鈑件、懸吊避震、轉向龍頭、電系設備與隨車工具配件）。</div>
+<div class="num-item"><strong>•</strong> <strong>圖號索引</strong>：每張分解圖紙上的各個零件均標示有唯一的數字編號 (<strong>Fig. N.</strong>)。</div>
+<div class="num-item"><strong>•</strong> <strong>零件清單欄位</strong>：</div>
+<ul>
+<li><strong>Fig. N.</strong>：分解圖編號。</li>
+<li><strong>PART NAME / DENOMINACION</strong>：零件名稱（原版為英文與西班牙文對照）。</li>
+<li><strong>Valid for / Válido para</strong>：適用車型標記（例如標註 <code>V9A1</code> 表示僅 Vespa 90 適用；標註 <code>V5A1</code> 則為 50cc 專用；箭頭雙向貫穿表示三款車型共用）。</li>
+<li><strong>Spare parts / Piezas de repuesto</strong>：Piaggio 原廠設計圖號 / 零件料號。</li>
+<li><strong>No. off / Cantidad</strong>：每輛車裝配之使用數量。</li>
+</ul>
+<div class="num-item"><strong>•</strong> <strong>料號編碼規則</strong>：</div>
+<ul>
+<li>前綴帶有 <strong>「S.」</strong> 開頭（例如 <code>S. 1107</code> 螺帽、<code>S. 3057</code> 平華司、<code>S. 7160</code> 軸承、<code>S. 8720</code> 油封）為 Piaggio 原廠規範之<strong>標準規格件 (Standard Parts)</strong>。</li>
+<li>純數字編號（例如 <code>78330</code> Vespa 90 曲軸、<code>98375</code> 汽缸組）為各車型專用之<strong>特製沖壓或精密機械加工件</strong>。</li>
+</ul>
+<h3 id="2全書16大分解圖表Tavole系統分區">2. 全書 16 大分解圖表 (Tavole) 系統分區</h3>
+<ul>
+<li><strong>引擎與動力系統 (Engine / Motor)</strong>：<code>T. I</code> 至 <code>T. VI</code></li>
+<li><strong>車體與懸吊系統 (Chassis / Bastidor)</strong>：<code>T. VII</code> 至 <code>T. IX</code></li>
+<li><strong>前叉轉向柱與懸吊 (Steering column / Dirección)</strong>：<code>T. X</code> 至 <code>T. XI</code></li>
+<li><strong>龍頭把手與儀表 (Handlebars / Manillar)</strong>：<code>T. XII</code></li>
+<li><strong>全車鋼索與煞車踏板 (Transmissions / Transmisiones)</strong>：<code>T. XIII</code></li>
+<li><strong>全車電系設備與配線 (Electrical equipment / Equipo eléctrico)</strong>：<code>T. XIV</code> 至 <code>T. XV</code></li>
+<li><strong>車輪、隨身工具與選配套件 (Wheel, Tools, Accessories)</strong>：<code>T. XVI</code></li>
+</ul>
+<hr/>
+<h2 id="第二部分16大分解系統繁體中文對照手冊">🛠️ 第二部分：16 大分解系統繁體中文對照手冊</h2>
+<h3 id="TI曲軸箱汽缸與曲軸總成CarterCylinderCrankshaft">T. I：曲軸箱、汽缸與曲軸總成 (Carter - Cylinder - Crankshaft)</h3>
+<blockquote>對應原廠第 3 ~ 4 頁 (Page 3-4)</blockquote>
+<p>本章包含 Vespa 90 核心動力心臟：鑄鐵汽缸、47mm 活塞組、曲軸總成與左右配對曲軸箱本體。</p>
+<div class="table-container"><table class="parts-table"><thead><tr>
+<th>圖號 (Fig. N.)</th>
+<th>中文零件名稱</th>
+<th>原廠英文 / 西文名稱</th>
+<th>Vespa 90 專用料號</th>
+<th>每車數量</th>
+<th>翻修與技術說明</th>
+</tr></thead><tbody>
+<tr>
+<td><strong>Fig. 1</strong></td>
+<td>曲軸箱長合箱螺栓</td>
+<td>Bolt, long / Tornillo largo</td>
+<td><code>S. 8499</code></td>
+<td>2</td>
+<td>貫穿左右箱體固定螺栓</td>
+</tr>
+<tr>
+<td><strong>Fig. 2</strong></td>
+<td>平華司墊圈</td>
+<td>Plain washer / Arandela plana</td>
+<td><code>S. 3057</code></td>
+<td>16</td>
+<td>防刮傷鋁合金箱體</td>
+</tr>
+<tr>
+<td><strong>Fig. 3</strong></td>
+<td>彈簧防鬆墊圈</td>
+<td>Spring washer / Arandela grower</td>
+<td><code>S. 3107</code></td>
+<td>21</td>
+<td>防止二行程高頻震動鬆脫</td>
+</tr>
+<tr>
+<td><strong>Fig. 4</strong></td>
+<td>標準合箱螺帽</td>
+<td>Nut / Tuerca</td>
+<td><code>S. 1107</code></td>
+<td>17</td>
+<td>搭配雙頭螺栓使用</td>
+</tr>
+<tr>
+<td><strong>Fig. 7</strong></td>
+<td>曲軸箱天柱雙頭螺栓</td>
+<td>Stud / Espárrago</td>
+<td><code>S. 480</code></td>
+<td>4</td>
+<td>汽缸固定天柱螺栓</td>
+</tr>
+<tr>
+<td><strong>Fig. 8</strong></td>
+<td>曲軸飛輪側油封</td>
+<td>Oil seal, flywheel side / Retén</td>
+<td><code>S. 8720</code></td>
+<td>1</td>
+<td>規格 <code>19 x 32 x 7 mm</code> (防漏氣)</td>
+</tr>
+<tr>
+<td><strong>Fig. 10</strong></td>
+<td>曲軸飛輪側主軸承</td>
+<td>Bearing, flywheel side / Cojinete</td>
+<td><code>S. 7160</code></td>
+<td>1</td>
+<td>原廠規格 <code>6204</code> 深溝滾珠軸承</td>
+</tr>
+<tr>
+<td><strong>Fig. 12</strong></td>
+<td>半月鍵 (Woodruff key)</td>
+<td>Key / Chaveta</td>
+<td><code>267</code></td>
+<td>2</td>
+<td>飛輪端與離合器齒輪曲軸端定位鍵</td>
+</tr>
+<tr>
+<td><strong>Fig. 13</strong></td>
+<td><strong>曲軸連桿總成</strong></td>
+<td>Crankshaft assy. / Cigüeñal</td>
+<td><strong><code>78330</code></strong></td>
+<td>1</td>
+<td><strong>Vespa 90 (V9A1) 專用曲軸</strong> (行程 51mm)</td>
+</tr>
+<tr>
+<td><strong>Fig. 15</strong></td>
+<td>曲軸箱本體配對組</td>
+<td>Crankcase assy. / Carter compl.</td>
+<td><code>90009</code></td>
+<td>1</td>
+<td>左右箱體工廠同機加工配對，不可混用</td>
+</tr>
+<tr>
+<td><strong>Fig. 16</strong></td>
+<td>全車引擎大修墊片組</td>
+<td>Set of gaskets / Serie juntas</td>
+<td><code>99715</code></td>
+<td>1</td>
+<td>含中線、汽缸底、進氣管與離合器蓋紙墊片</td>
+</tr>
+<tr>
+<td><strong>Fig. 17</strong></td>
+<td>曲軸傳動離合器側油封</td>
+<td>Oil seal, clutch side / Retén</td>
+<td><code>S. 8731</code></td>
+<td>1</td>
+<td>規格 <code>22.7 x 47 x 7 mm</code> (隔絕齒輪箱機油)</td>
+</tr>
+<tr>
+<td><strong>Fig. 19</strong></td>
+<td>曲軸傳動側主培林</td>
+<td>Ball bearing, clutch side</td>
+<td><code>S. 7125</code></td>
+<td>1</td>
+<td>原廠規格 <code>6303</code> (承受離合器推力，需 C3 遊隙)</td>
+</tr>
+<tr>
+<td><strong>Fig. 20</strong></td>
+<td>曲軸箱中線密封墊片</td>
+<td>Gasket / Junta</td>
+<td><code>78933</code></td>
+<td>1</td>
+<td>原廠紙墊片，安裝抹微量耐油膠</td>
+</tr>
+<tr>
+<td><strong>Fig. 33</strong></td>
+<td>活塞銷 (標準尺寸)</td>
+<td>Wrist pin, normal / Eje pistón</td>
+<td><strong><code>78333</code></strong></td>
+<td>1</td>
+<td>Vespa 90 專用 12mm 銷徑</td>
+</tr>
+<tr>
+<td><strong>Fig. 34</strong></td>
+<td><strong>標準活塞總成</strong></td>
+<td>Piston wrist pin assy.</td>
+<td><strong><code>98151</code></strong></td>
+<td>1</td>
+<td><strong>直徑 47.0 mm</strong>，含活塞環與卡簧</td>
+</tr>
+<tr>
+<td><strong>Fig. 35</strong></td>
+<td><strong>標準活塞環</strong></td>
+<td>Piston ring, normal / Segmento</td>
+<td><strong><code>78338</code></strong></td>
+<td>2</td>
+<td><strong>47.0 x 1.5 mm</strong> (開口朝後避開掃氣道)</td>
+</tr>
+<tr>
+<td><strong>Fig. 35</strong></td>
+<td>第 1 級加大活塞環</td>
+<td>Piston ring, 1st o/s</td>
+<td><code>97993</code></td>
+<td>2</td>
+<td>搪缸 +0.2mm (47.2 mm)</td>
+</tr>
+<tr>
+<td><strong>Fig. 35</strong></td>
+<td>第 2 級加大活塞環</td>
+<td>Piston ring, 2nd o/s</td>
+<td><code>97994</code></td>
+<td>2</td>
+<td>搪缸 +0.4mm (47.4 mm)</td>
+</tr>
+<tr>
+<td><strong>Fig. 37</strong></td>
+<td>汽缸底部紙墊片</td>
+<td>Cylinder gasket / Junta</td>
+<td><code>78961</code></td>
+<td>1</td>
+<td>厚度約 0.2~0.3mm，決定掃氣口正時</td>
+</tr>
+<tr>
+<td><strong>Fig. 38</strong></td>
+<td><strong>汽缸活塞整套總成</strong></td>
+<td>Cylinder piston assy.</td>
+<td><strong><code>98375</code></strong></td>
+<td>1</td>
+<td><strong>88.5cc 鑄鐵汽缸配 47mm 活塞</strong></td>
+</tr>
+<tr>
+<td><strong>Fig. 43</strong></td>
+<td>鋁合金汽缸頭</td>
+<td>Cylinder head / Culata</td>
+<td><strong><code>79957</code></strong></td>
+<td>1</td>
+<td>Vespa 90 專用燃燒室容積 (壓縮比 7.2:1)</td>
+</tr>
+<tr>
+<td><strong>Fig. 45</strong></td>
+<td>短牙火星塞</td>
+<td>Sparking - plug / Bujía</td>
+<td><code>98753</code></td>
+<td>1</td>
+<td>原廠指定短牙 (NGK B6HS / Bosch W7AC)</td>
+</tr>
+<tr>
+<td><strong>Fig. 47</strong></td>
+<td>汽缸散熱導風罩</td>
+<td>Cooling hood / Deflector</td>
+<td><strong><code>110097</code></strong></td>
+<td>1</td>
+<td>Vespa 90 專用較高深導風罩</td>
+</tr>
+</tbody></table></div>
+<hr/>
+<h3 id="TII離合器減震齒盤與踩發機構ClutchKickstarter">T. II：離合器、減震齒盤與踩發機構 (Clutch - Kickstarter)</h3>
+<blockquote>對應原廠第 5 ~ 6 頁 (Page 5-6)</blockquote>
+<div class="table-container"><table class="parts-table"><thead><tr>
+<th>圖號 (Fig. N.)</th>
+<th>中文零件名稱</th>
+<th>原廠英文 / 西文名稱</th>
+<th>原廠料號</th>
+<th>數量</th>
+<th>翻修與技術說明</th>
+</tr></thead><tbody>
+<tr>
+<td><strong>Fig. 1</strong></td>
+<td>離合器軟木摩擦片</td>
+<td>Driven disc, cork / Disco</td>
+<td><code>78401</code></td>
+<td>3</td>
+<td>原廠 3 片式木質摩擦片 (組裝前泡油 2 小時)</td>
+</tr>
+<tr>
+<td><strong>Fig. 2</strong></td>
+<td>離合器鋼片</td>
+<td>Drive disc, steel / Disco conductor</td>
+<td><code>78402</code></td>
+<td>2</td>
+<td>平整度需良好，若燒藍退火需更換</td>
+</tr>
+<tr>
+<td><strong>Fig. 3</strong></td>
+<td>離合器中央螺旋彈簧</td>
+<td>Clutch spring / Muelle</td>
+<td><code>78403</code></td>
+<td>1</td>
+<td>早期 Smallframe 單一大彈簧規格</td>
+</tr>
+<tr>
+<td><strong>Fig. 5</strong></td>
+<td>離合器銅襯套</td>
+<td>Clutch bush / Casquillo</td>
+<td><code>78406</code></td>
+<td>1</td>
+<td>壓裝於離合器齒輪內側，需定期潤滑</td>
+</tr>
+<tr>
+<td><strong>Fig. 11</strong></td>
+<td>離合器推力黃銅頂銷</td>
+<td>Push piece / Empujador</td>
+<td><code>78414</code></td>
+<td>1</td>
+<td><strong>俗稱黃銅壓塊 (Plunger)</strong>，安裝需塗耐溫黃油</td>
+</tr>
+<tr>
+<td><strong>Fig. 13</strong></td>
+<td>防鬆折邊華司</td>
+<td>Lock washer / Arandela seg.</td>
+<td><code>78416</code></td>
+<td>1</td>
+<td>緊固離合器螺母後必須扳起邊緣防鬆</td>
+</tr>
+<tr>
+<td><strong>Fig. 15</strong></td>
+<td>原廠離合器總成</td>
+<td>Clutch complete / Embrague</td>
+<td><code>78420</code></td>
+<td>1</td>
+<td>整顆已組裝完成之離合器</td>
+</tr>
+<tr>
+<td><strong>Fig. 20</strong></td>
+<td>踩發半圓齒輪軸</td>
+<td>Kickstarter segment / Sector</td>
+<td><code>78440</code></td>
+<td>1</td>
+<td>踩發下壓時嚙合副軸之扇形齒輪</td>
+</tr>
+<tr>
+<td><strong>Fig. 22</strong></td>
+<td>踩發軸回位扭力大彈簧</td>
+<td>Return spring / Muelle</td>
+<td><code>78442</code></td>
+<td>1</td>
+<td>確保踩發桿踏下後能立即彈回上位</td>
+</tr>
+<tr>
+<td><strong>Fig. 26</strong></td>
+<td>鋁合金踩發踏桿</td>
+<td>Kickstart pedal / Pedal</td>
+<td><code>78450</code></td>
+<td>1</td>
+<td>經典曲型鋁合金踏桿</td>
+</tr>
+<tr>
+<td><strong>Fig. 28</strong></td>
+<td>踩發內部橡膠緩衝塊</td>
+<td>Rubber buffer / Taco de goma</td>
+<td><code>78453</code></td>
+<td>2</td>
+<td>安裝於曲軸箱內部，防止踩發桿回彈敲裂箱體</td>
+</tr>
+</tbody></table></div>
+<hr/>
+<h3 id="TIII後輪鼓3速齒輪箱與低壓分電座RearwheelhubGeargroupLTsocket">T. III：後輪鼓、3速齒輪箱與低壓分電座 (Rear wheel hub - Gear group - L. T. socket)</h3>
+<blockquote>對應原廠第 7 ~ 8 頁 (Page 7-8)</blockquote>
+<div class="table-container"><table class="parts-table"><thead><tr>
+<th>圖號 (Fig. N.)</th>
+<th>中文零件名稱</th>
+<th>原廠英文 / 西文名稱</th>
+<th>原廠料號</th>
+<th>數量</th>
+<th>翻修與技術說明</th>
+</tr></thead><tbody>
+<tr>
+<td><strong>Fig. 1</strong></td>
+<td>後輪鑄鐵煞車鼓</td>
+<td>Rear brake drum / Tambor</td>
+<td><code>78500</code></td>
+<td>1</td>
+<td>內建煞車摩擦面與 4 孔輪圈螺栓座</td>
+</tr>
+<tr>
+<td><strong>Fig. 4</strong></td>
+<td>後煞車蹄片組</td>
+<td>Brake shoes pair / Zapatas</td>
+<td><code>78510</code></td>
+<td>1</td>
+<td>含回位彈簧與兩片煞車來令片</td>
+</tr>
+<tr>
+<td><strong>Fig. 9</strong></td>
+<td>後輪軸輸出油封</td>
+<td>Oil seal f. rear axle / Retén</td>
+<td><code>S. 8735</code></td>
+<td>1</td>
+<td><strong>規格 <code>27 x 47 x 6 mm</code></strong>，防止機油污染煞車鼓</td>
+</tr>
+<tr>
+<td><strong>Fig. 12</strong></td>
+<td>後輪驅動變速主軸</td>
+<td>Main drive shaft / Eje rueda</td>
+<td><code>78525</code></td>
+<td>1</td>
+<td>貫穿 3 速齒輪群與換檔十字爪之主軸</td>
+</tr>
+<tr>
+<td><strong>Fig. 14</strong></td>
+<td><strong>3速換檔十字爪</strong></td>
+<td>Gear selector spider (Cruciform)</td>
+<td><strong><code>78530</code></strong></td>
+<td>1</td>
+<td><strong>核心消耗件</strong>，邊角磨圓會導致重油門跳檔</td>
+</tr>
+<tr>
+<td><strong>Fig. 16</strong></td>
+<td>1 檔變速齒輪</td>
+<td>Gear 1st speed / 1.a velocidad</td>
+<td><code>78535</code></td>
+<td>1</td>
+<td>46 齒 (46T)</td>
+</tr>
+<tr>
+<td><strong>Fig. 17</strong></td>
+<td>2 檔變速齒輪</td>
+<td>Gear 2nd speed / 2.a velocidad</td>
+<td><code>78536</code></td>
+<td>1</td>
+<td>42 齒 (42T)</td>
+</tr>
+<tr>
+<td><strong>Fig. 18</strong></td>
+<td>3 檔變速齒輪</td>
+<td>Gear 3rd speed / 3.a velocidad</td>
+<td><code>78537</code></td>
+<td>1</td>
+<td>38 齒 (38T)</td>
+</tr>
+<tr>
+<td><strong>Fig. 20</strong></td>
+<td>齒輪間隙校準墊圈</td>
+<td>Gear adjusting washer / Arandela</td>
+<td><code>78540</code></td>
+<td>2</td>
+<td>軸向間隙需維持在 0.15 ~ 0.40 mm 之間</td>
+</tr>
+<tr>
+<td><strong>Fig. 25</strong></td>
+<td>低壓接線端子盒</td>
+<td>L.T. junction box / Caja B.T.</td>
+<td><code>78560</code></td>
+<td>1</td>
+<td>引擎外側電盤出線與全車線束連接分電盒</td>
+</tr>
+</tbody></table></div>
+<hr/>
+<h3 id="TV電盤飛輪與點火照明線圈FlywheelCoilsmodV9A1">T. V：電盤飛輪與點火/照明線圈 (Flywheel - Coils: mod. V9A1)</h3>
+<blockquote>對應原廠第 11 ~ 12 頁 (Page 11-12) —— <strong>Vespa 90 (V9A1T) 專屬電裝</strong></blockquote>
+<div class="table-container"><table class="parts-table"><thead><tr>
+<th>圖號 (Fig. N.)</th>
+<th>中文零件名稱</th>
+<th>原廠英文 / 西文名稱</th>
+<th>Vespa 90 專用料號</th>
+<th>數量</th>
+<th>翻修與技術說明</th>
+</tr></thead><tbody>
+<tr>
+<td><strong>Fig. 1</strong></td>
+<td>電盤磁石飛輪轉子</td>
+<td>Flywheel rotor / Rotor</td>
+<td><strong><code>98363</code></strong></td>
+<td>1</td>
+<td>6V 交流電盤，帶有自退拔卡簧槽</td>
+</tr>
+<tr>
+<td><strong>Fig. 3</strong></td>
+<td>電仁發電底板總成</td>
+<td>Stator base plate / Plato</td>
+<td><strong><code>98365</code></strong></td>
+<td>1</td>
+<td>雙線圈底板 (點火線圈 + 照明線圈)</td>
+</tr>
+<tr>
+<td><strong>Fig. 5</strong></td>
+<td><strong>接觸式白金斷電器</strong></td>
+<td>Contact breaker points / Ruptor</td>
+<td><strong><code>78601</code></strong></td>
+<td>1</td>
+<td><strong>間隙調整值：0.3 ~ 0.5 mm</strong></td>
+</tr>
+<tr>
+<td><strong>Fig. 7</strong></td>
+<td><strong>點火電容器</strong></td>
+<td>Condenser / Condensador</td>
+<td><strong><code>78605</code></strong></td>
+<td>1</td>
+<td>金屬圓柱電容 (0.32μF)，吸收火花保護白金</td>
+</tr>
+<tr>
+<td><strong>Fig. 10</strong></td>
+<td>內部高壓點火線圈</td>
+<td>Ignition H.T. coil / Bobina int.</td>
+<td><strong><code>98368</code></strong></td>
+<td>1</td>
+<td>原廠內置式高壓線圈，直出火星塞高壓線</td>
+</tr>
+<tr>
+<td><strong>Fig. 12</strong></td>
+<td>6V 照明發電線圈</td>
+<td>Lighting coil 6V / Bobina alum.</td>
+<td><strong><code>98369</code></strong></td>
+<td>1</td>
+<td>提供大燈 (15W) 與尾燈 (5W) 電力</td>
+</tr>
+<tr>
+<td><strong>Fig. 15</strong></td>
+<td>飛輪自退拔卡簧</td>
+<td>Flywheel circlip / Anillo elást.</td>
+<td><code>78620</code></td>
+<td>1</td>
+<td>卡入飛輪外圈，旋開中心螺母即可自動頂出飛輪</td>
+</tr>
+</tbody></table></div>
+<hr/>
+<h3 id="TVI化油器與空氣濾清器CarburettorAircleaner">T. VI：化油器與空氣濾清器 (Carburettor - Air cleaner)</h3>
+<blockquote>對應原廠第 13 ~ 14 頁 (Page 13-14)</blockquote>
+<div class="table-container"><table class="parts-table"><thead><tr>
+<th>圖號 (Fig. N.)</th>
+<th>中文零件名稱</th>
+<th>原廠英文 / 西文名稱</th>
+<th>原廠料號</th>
+<th>數量</th>
+<th>翻修與技術說明</th>
+</tr></thead><tbody>
+<tr>
+<td><strong>Fig. 1</strong></td>
+<td><strong>化油器總成</strong></td>
+<td>Carburettor SHB 16/16</td>
+<td><strong><code>98430</code></strong></td>
+<td>1</td>
+<td><strong>Dell'Orto SHB 16/16 原廠專用</strong></td>
+</tr>
+<tr>
+<td><strong>Fig. 3</strong></td>
+<td><strong>主油嘴 (Main Jet)</strong></td>
+<td>Main jet 74 / Surtidor princ.</td>
+<td><strong><code>98433</code></strong></td>
+<td>1</td>
+<td><strong>原廠標準 #74</strong> (M5 螺紋)</td>
+</tr>
+<tr>
+<td><strong>Fig. 5</strong></td>
+<td>慢速/怠速油嘴</td>
+<td>Idle jet 42 / Surtidor ralentí</td>
+<td><strong><code>98435</code></strong></td>
+<td>1</td>
+<td>原廠長柄側置油嘴 <strong>#42</strong></td>
+</tr>
+<tr>
+<td><strong>Fig. 7</strong></td>
+<td>啟動阻風門油嘴</td>
+<td>Choke jet 50 / Estrangulador</td>
+<td><code>98437</code></td>
+<td>1</td>
+<td>冷車拉阻風門專用油嘴 <strong>#50</strong></td>
+</tr>
+<tr>
+<td><strong>Fig. 10</strong></td>
+<td>浮筒耐磨三角油針</td>
+<td>Float needle valve / Aguja</td>
+<td><code>78710</code></td>
+<td>1</td>
+<td>黑色耐油合成橡膠針尖，防溢油核心件</td>
+</tr>
+<tr>
+<td><strong>Fig. 12</strong></td>
+<td>白色塑料浮筒</td>
+<td>Float / Flotador</td>
+<td><code>78715</code></td>
+<td>1</td>
+<td>重量 3.5g，浮力不足需更換</td>
+</tr>
+<tr>
+<td><strong>Fig. 16</strong></td>
+<td>金屬空氣濾清器集氣盒</td>
+<td>Air filter box / Caja filtro</td>
+<td><code>78730</code></td>
+<td>1</td>
+<td>內建細孔金屬濾網，以汽油洗滌即可保養</td>
+</tr>
+<tr>
+<td><strong>Fig. 20</strong></td>
+<td>鋁合金進氣岐管</td>
+<td>Intake manifold / Tubo adm.</td>
+<td><code>78740</code></td>
+<td>1</td>
+<td>旋轉閥進氣導管 (16mm 內徑)</td>
+</tr>
+<tr>
+<td><strong>Fig. 22</strong></td>
+<td>岐管金屬密封束環套筒</td>
+<td>Manifold clamp / Abrazadera</td>
+<td><code>78745</code></td>
+<td>1</td>
+<td>防漏氣迫緊金屬套環，漏氣會造成飛車怠速不降</td>
+</tr>
+</tbody></table></div>
+<hr/>
+<h3 id="TVII坐墊油箱與三段油開關SaddleFueltankFuelcock">T. VII：坐墊、油箱與三段油開關 (Saddle - Fuel tank - Fuel cock)</h3>
+<blockquote>對應原廠第 15 ~ 16 頁 (Page 15-16)</blockquote>
+<div class="table-container"><table class="parts-table"><thead><tr>
+<th>圖號 (Fig. N.)</th>
+<th>中文零件名稱</th>
+<th>原廠英文 / 西文名稱</th>
+<th>原廠料號</th>
+<th>數量</th>
+<th>翻修與技術說明</th>
+</tr></thead><tbody>
+<tr>
+<td><strong>Fig. 1</strong></td>
+<td>鋼製燃油箱總成</td>
+<td>Fuel tank / Depósito gasolina</td>
+<td><code>78800</code></td>
+<td>1</td>
+<td>容積 5.6 公升 (含備用油約 1 公升)</td>
+</tr>
+<tr>
+<td><strong>Fig. 4</strong></td>
+<td>三段式油開關總成</td>
+<td>Fuel tap assy. / Grifo compl.</td>
+<td><code>78810</code></td>
+<td>1</td>
+<td>具有關閉 (C)、開啟 (A)、備用油 (R) 三檔</td>
+</tr>
+<tr>
+<td><strong>Fig. 6</strong></td>
+<td>油開關內部四孔橡皮墊片</td>
+<td>Rubber gasket / Junta de goma</td>
+<td><code>78815</code></td>
+<td>1</td>
+<td>老化硬化會導致關油依然滲漏，需更換耐油件</td>
+</tr>
+<tr>
+<td><strong>Fig. 8</strong></td>
+<td>油開關金屬延伸拉桿</td>
+<td>Fuel tap rod / Varilla grifo</td>
+<td><code>78820</code></td>
+<td>1</td>
+<td>向上延伸至座墊下方外露便於操作</td>
+</tr>
+<tr>
+<td><strong>Fig. 15</strong></td>
+<td>經典單人彈簧皮革坐墊</td>
+<td>Single saddle (Solo) / Sillín</td>
+<td><code>98500</code></td>
+<td>1</td>
+<td>義大利原汁原味單人坐墊</td>
+</tr>
+<tr>
+<td><strong>Fig. 18</strong></td>
+<td>雙人長型座墊 (選配)</td>
+<td>Dual seat / Sillín biplaza</td>
+<td><code>98510</code></td>
+<td>1</td>
+<td>原廠配件，適合雙人騎乘巡航</td>
+</tr>
+</tbody></table></div>
+<hr/>
+<h3 id="TVIII車架鈑件側蓋中柱與飾條ChassisToolboxOrnamentalstripsStand">T. VIII：車架鈑件、側蓋、中柱與飾條 (Chassis - Tool box - Ornamental strips - Stand)</h3>
+<blockquote>對應原廠第 17 ~ 18 頁 (Page 17-18)</blockquote>
+<div class="table-container"><table class="parts-table"><thead><tr>
+<th>圖號 (Fig. N.)</th>
+<th>中文零件名稱</th>
+<th>原廠英文 / 西文名稱</th>
+<th>原廠料號</th>
+<th>數量</th>
+<th>翻修與技術說明</th>
+</tr></thead><tbody>
+<tr>
+<td><strong>Fig. 1</strong></td>
+<td>單體沖壓鋼架車身</td>
+<td>Chassis / Bastidor completo</td>
+<td><strong><code>98669</code></strong></td>
+<td>1</td>
+<td>經典航太沖壓一體成型鋼板車架</td>
+</tr>
+<tr>
+<td><strong>Fig. 3</strong></td>
+<td><strong>前期型引擎小側蓋</strong></td>
+<td>Side door (Small) / Tapa peq.</td>
+<td><strong><code>78901</code></strong></td>
+<td>1</td>
+<td><strong>前期車身專用</strong> (車架號 141544 之前)</td>
+</tr>
+<tr>
+<td><strong>Fig. 3</strong></td>
+<td><strong>後期型引擎大側蓋</strong></td>
+<td>Side door (Large) / Tapa grande</td>
+<td><strong><code>110098</code></strong></td>
+<td>1</td>
+<td><strong>後期改款專用</strong> (車架號 141545 之後)</td>
+</tr>
+<tr>
+<td><strong>Fig. 7</strong></td>
+<td>中柱駐車支架</td>
+<td>Center stand / Caballete</td>
+<td><code>78920</code></td>
+<td>1</td>
+<td>16mm 管徑雙腳金屬支撐架</td>
+</tr>
+<tr>
+<td><strong>Fig. 9</strong></td>
+<td>中柱回位彈簧</td>
+<td>Stand spring / Muelle caballete</td>
+<td><code>78925</code></td>
+<td>1</td>
+<td>強力拉力彈簧</td>
+</tr>
+<tr>
+<td><strong>Fig. 12</strong></td>
+<td>腳踏鋁合金飾條組</td>
+<td>Floor strips kit / Reposapiés</td>
+<td><code>78940</code></td>
+<td>1</td>
+<td>包含 6 條鋁軌、黑橡膠防滑皮與鋁鉚釘</td>
+</tr>
+<tr>
+<td><strong>Fig. 20</strong></td>
+<td>斜體立體金屬銘牌 "Vespa 90"</td>
+<td>Metallic badge / Letrero escudo</td>
+<td><strong><code>98702</code></strong></td>
+<td>1</td>
+<td>前斜板經典草寫金屬飾牌 (Corsivo)</td>
+</tr>
+</tbody></table></div>
+<hr/>
+<h3 id="TX前叉轉向柱前土除與前輪鼓SteeringcolMudguardWheelhubSecuritylock">T. X：前叉轉向柱、前土除與前輪鼓 (Steering col. - Mudguard - Wheel hub - Security lock)</h3>
+<blockquote>對應原廠第 21 ~ 22 頁 (Page 21-22)</blockquote>
+<div class="table-container"><table class="parts-table"><thead><tr>
+<th>圖號 (Fig. N.)</th>
+<th>中文零件名稱</th>
+<th>原廠英文 / 西文名稱</th>
+<th>原廠料號</th>
+<th>數量</th>
+<th>翻修與技術說明</th>
+</tr></thead><tbody>
+<tr>
+<td><strong>Fig. 1</strong></td>
+<td>前叉單側轉向柱總成</td>
+<td>Steering column / Tubo direcc.</td>
+<td><code>79100</code></td>
+<td>1</td>
+<td>經典 Vespa 單側前避震搖臂前叉</td>
+</tr>
+<tr>
+<td><strong>Fig. 3</strong></td>
+<td>前輪沖壓金屬土除</td>
+<td>Front mudguard / Guardabarros</td>
+<td><code>79110</code></td>
+<td>1</td>
+<td>圓弧造型沖壓前土除</td>
+</tr>
+<tr>
+<td><strong>Fig. 7</strong></td>
+<td>轉向珠碗滾珠套組</td>
+<td>Steering bearings kit / Cojinetes</td>
+<td><code>79125</code></td>
+<td>1</td>
+<td>上珠碗 (19 顆) + 下珠碗 (24 顆鋼珠)</td>
+</tr>
+<tr>
+<td><strong>Fig. 12</strong></td>
+<td>前輪煞車輪鼓</td>
+<td>Front brake drum / Tambor del.</td>
+<td><code>79140</code></td>
+<td>1</td>
+<td>前輪對開鋼圈固定輪鼓</td>
+</tr>
+<tr>
+<td><strong>Fig. 16</strong></td>
+<td>Neiman 車把防盜鎖</td>
+<td>Security lock / Cerradura</td>
+<td><code>79160</code></td>
+<td>1</td>
+<td>原廠 Neiman 銅製轉向龍頭鎖 (附專屬鑰匙)</td>
+</tr>
+</tbody></table></div>
+<hr/>
+<h3 id="TXII龍頭手把與儀表HandlebarsSpeedometer">T. XII：龍頭手把與儀表 (Handlebars - Speedometer)</h3>
+<blockquote>對應原廠第 25 ~ 26 頁 (Page 25-26)</blockquote>
+<div class="table-container"><table class="parts-table"><thead><tr>
+<th>圖號 (Fig. N.)</th>
+<th>中文零件名稱</th>
+<th>原廠英文 / 西文名稱</th>
+<th>原廠料號</th>
+<th>數量</th>
+<th>翻修與技術說明</th>
+</tr></thead><tbody>
+<tr>
+<td><strong>Fig. 1</strong></td>
+<td>鑄鋁龍頭手把主體</td>
+<td>Handlebar body / Cuerpo manillar</td>
+<td><strong><code>98673</code></strong></td>
+<td>1</td>
+<td>圓燈造型整體鑄鋁龍頭把手</td>
+</tr>
+<tr>
+<td><strong>Fig. 4</strong></td>
+<td>左側換檔轉動套管</td>
+<td>Gear control tube / Tubo cambio</td>
+<td><code>79210</code></td>
+<td>1</td>
+<td>連動換檔雙拉索 (刻有 1-0-2-3 檔位數字)</td>
+</tr>
+<tr>
+<td><strong>Fig. 7</strong></td>
+<td>右側油門轉把套管</td>
+<td>Throttle tube / Tubo gas</td>
+<td><code>79220</code></td>
+<td>1</td>
+<td>連動油門加速鋼索</td>
+</tr>
+<tr>
+<td><strong>Fig. 12</strong></td>
+<td>換檔扇形滑盤</td>
+<td>Selector disc / Polea cambio</td>
+<td><code>79235</code></td>
+<td>1</td>
+<td>內置雙拉索走線滑輪</td>
+</tr>
+<tr>
+<td><strong>Fig. 18</strong></td>
+<td>時速儀表 (80 km/h)</td>
+<td>Speedometer / Cuentakilómetros</td>
+<td><code>79260</code></td>
+<td>1</td>
+<td>原廠扇形/圓形碼表 (表底 80km/h)</td>
+</tr>
+</tbody></table></div>
+<hr/>
+<h3 id="TXIII全車鋼索拉線與後煞車踏板TransmissionsRearbrakepedal">T. XIII：全車鋼索拉線與後煞車踏板 (Transmissions - Rear brake pedal)</h3>
+<blockquote>對應原廠第 27 ~ 28 頁 (Page 27-28)</blockquote>
+<div class="table-container"><table class="parts-table"><thead><tr>
+<th>圖號 (Fig. N.)</th>
+<th>中文零件名稱</th>
+<th>原廠英文 / 西文名稱</th>
+<th>原廠料號</th>
+<th>數量</th>
+<th>翻修與技術說明</th>
+</tr></thead><tbody>
+<tr>
+<td><strong>Fig. 1</strong></td>
+<td>離合器鋼索總成</td>
+<td>Clutch cable / Transmisión embr.</td>
+<td><code>79301</code></td>
+<td>1</td>
+<td>外管 + 鐵氟龍潤滑層內索</td>
+</tr>
+<tr>
+<td><strong>Fig. 3</strong></td>
+<td>油門拉索總成</td>
+<td>Throttle cable / Transmisión gas</td>
+<td><code>79310</code></td>
+<td>1</td>
+<td>油門化油器連動線</td>
+</tr>
+<tr>
+<td><strong>Fig. 6</strong></td>
+<td>換檔雙鋼索組</td>
+<td>Gear cables pair / Transmisiones</td>
+<td><code>79320</code></td>
+<td>2</td>
+<td>1 檔與 2-3 檔推拉鋼索</td>
+</tr>
+<tr>
+<td><strong>Fig. 10</strong></td>
+<td>後煞車腳踏板本體</td>
+<td>Rear brake pedal / Pedal freno</td>
+<td><code>79340</code></td>
+<td>1</td>
+<td>鑄鋁腳踏煞車踏板</td>
+</tr>
+<tr>
+<td><strong>Fig. 15</strong></td>
+<td><strong>後煞車常閉式開關</strong></td>
+<td>Brake stop switch / Interruptor</td>
+<td><code>79355</code></td>
+<td>1</td>
+<td><strong>常閉型 (NC)</strong>，踏下斷開導通煞車燈</td>
+</tr>
+</tbody></table></div>
+<hr/>
+<h3 id="TXIV大燈尾燈開關盒與喇叭HeadlampRearlampsSwitchHorn">T. XIV：大燈、尾燈、開關盒與喇叭 (Head lamp - Rear lamps - Switch - Horn)</h3>
+<blockquote>對應原廠第 29 ~ 30 頁 (Page 29-30)</blockquote>
+<div class="table-container"><table class="parts-table"><thead><tr>
+<th>圖號 (Fig. N.)</th>
+<th>中文零件名稱</th>
+<th>原廠英文 / 西文名稱</th>
+<th>原廠料號</th>
+<th>數量</th>
+<th>翻修與技術說明</th>
+</tr></thead><tbody>
+<tr>
+<td><strong>Fig. 1</strong></td>
+<td>105mm 前大燈總成</td>
+<td>Head lamp unit / Proyector faro</td>
+<td><code>79400</code></td>
+<td>1</td>
+<td>Siem 原廠圓形玻璃燈具</td>
+</tr>
+<tr>
+<td><strong>Fig. 3</strong></td>
+<td>大燈鍍鉻裝飾外圈</td>
+<td>Headlight rim chrome / Cerquillo</td>
+<td><code>79410</code></td>
+<td>1</td>
+<td>金屬鍍鉻外框保護環</td>
+</tr>
+<tr>
+<td><strong>Fig. 6</strong></td>
+<td>古典小紅鏡後尾燈總成</td>
+<td>Tail light assy. / Piloto trasero</td>
+<td><code>79425</code></td>
+<td>1</td>
+<td>金屬鍍鉻基座配紅色玻璃鏡片</td>
+</tr>
+<tr>
+<td><strong>Fig. 10</strong></td>
+<td>把手三合一開關盒</td>
+<td>Switch box / Conmutador</td>
+<td><code>79440</code></td>
+<td>1</td>
+<td>整合熄火按鈕、大燈近遠光切換與喇叭</td>
+</tr>
+<tr>
+<td><strong>Fig. 15</strong></td>
+<td>6V 交流電喇叭</td>
+<td>Horn 6V AC / Claxon</td>
+<td><code>79460</code></td>
+<td>1</td>
+<td>蜂鳴片式交流喇叭</td>
+</tr>
+</tbody></table></div>
+<hr/>
+<h3 id="TXV全車電系配線線束Cableharness">T. XV：全車電系配線線束 (Cable harness)</h3>
+<blockquote>對應原廠第 31 ~ 32 頁 (Page 31-32)</blockquote>
+<div class="table-container"><table class="parts-table"><thead><tr>
+<th>圖號 (Fig. N.)</th>
+<th>中文零件名稱</th>
+<th>原廠英文 / 西文名稱</th>
+<th>原廠料號</th>
+<th>數量</th>
+<th>翻修與技術說明</th>
+</tr></thead><tbody>
+<tr>
+<td><strong>Fig. 1</strong></td>
+<td>全車電路主配線線束</td>
+<td>Main wiring harness / Instalación</td>
+<td><strong><code>79500</code></strong></td>
+<td>1</td>
+<td><strong>無電瓶純交流 6V 全車配線</strong></td>
+</tr>
+<tr>
+<td><strong>Fig. 3</strong></td>
+<td>車架穿線護線橡膠套圈</td>
+<td>Rubber grommet / Pasacables</td>
+<td><code>79515</code></td>
+<td>4</td>
+<td>防止車身金屬邊緣割破線皮引發短路</td>
+</tr>
+<tr>
+<td><strong>Fig. 6</strong></td>
+<td>點火高壓導線</td>
+<td>HT ignition lead / Cable alta tens.</td>
+<td><code>79530</code></td>
+<td>1</td>
+<td>耐高壓矽膠導線，連接火星塞</td>
+</tr>
+<tr>
+<td><strong>Fig. 8</strong></td>
+<td>金屬屏蔽火星塞帽</td>
+<td>Spark plug cap / Capuchón</td>
+<td><code>29465</code></td>
+<td>1</td>
+<td>防水防干擾金屬外殼管帽</td>
+</tr>
+</tbody></table></div>
+<hr/>
+<h3 id="TXVI車輪鋼圈隨車工具與掛包勾WheelToolsAccessories">T. XVI：車輪鋼圈、隨車工具與掛包勾 (Wheel - Tools - Accessories)</h3>
+<blockquote>對應原廠第 33 ~ 34 頁 (Page 33-34)</blockquote>
+<div class="table-container"><table class="parts-table"><thead><tr>
+<th>圖號 (Fig. N.)</th>
+<th>中文零件名稱</th>
+<th>原廠英文 / 西文名稱</th>
+<th>原廠料號</th>
+<th>數量</th>
+<th>翻修與技術說明</th>
+</tr></thead><tbody>
+<tr>
+<td><strong>Fig. 1</strong></td>
+<td>對剖式輪圈半片</td>
+<td>Split rim wheel half / Semillanta</td>
+<td><code>79600</code></td>
+<td>4</td>
+<td><strong>3.00-10 吋前後對開鐵框</strong> (每輪兩片對鎖)</td>
+</tr>
+<tr>
+<td><strong>Fig. 4</strong></td>
+<td>3.00-10 外胎</td>
+<td>Tire 3.00-10 / Neumático</td>
+<td><code>79610</code></td>
+<td>2</td>
+<td>建議胎壓前 18 psi，後 25~32 psi</td>
+</tr>
+<tr>
+<td><strong>Fig. 5</strong></td>
+<td>3.00-10 彎嘴內胎</td>
+<td>Inner tube / Cámara de aire</td>
+<td><code>79615</code></td>
+<td>2</td>
+<td>丁基橡膠氣門嘴內胎</td>
+</tr>
+<tr>
+<td><strong>Fig. 10</strong></td>
+<td>原廠隨身工具袋</td>
+<td>Tool roll pouch / Bolsa herram.</td>
+<td><code>79640</code></td>
+<td>1</td>
+<td>原廠帆布工具包</td>
+</tr>
+<tr>
+<td><strong>Fig. 12</strong></td>
+<td>火星塞/輪胎螺帽雙用扳手</td>
+<td>Spark plug wrench / Llave bujía</td>
+<td><code>79650</code></td>
+<td>1</td>
+<td>專用多功能套筒扳手 (11-13-21mm)</td>
+</tr>
+<tr>
+<td><strong>Fig. 16</strong></td>
+<td><strong>行李置物掛包勾總成</strong></td>
+<td>Bag hook accessory / Gancho</td>
+<td><strong><code>110612</code></strong></td>
+<td>1</td>
+<td><strong>選配套件 (組裝規範見下方)</strong></td>
+</tr>
+</tbody></table></div>
+<hr/>
+<h2 id="第三部分特殊配件組裝施工說明NoticeAdvertencia">📌 第三部分：特殊配件組裝施工說明 (Notice - Advertencia)</h2>
+<blockquote>對應原廠手冊第 34 頁 (Page 34)</blockquote>
+<h3 id="掛包勾HooksforbagGanchosportabolsa安裝說明">掛包勾 (Hooks for bag / Ganchos porta-bolsa) 安裝說明</h3>
+<ul>
+<li><strong>配件料號</strong>：<code>110612</code></li>
+<li><strong>適用對象</strong>：安裝於原廠單人彈簧皮革坐墊 (Normal single saddle)</li>
+<li><strong>原廠施工步驟指引</strong>：</li>
+</ul>
+<div class="num-item"><strong>•</strong> 拆卸單人坐墊下方的中央大彈簧 (Dismount the seat central spring)。</div>
+<div class="num-item"><strong>•</strong> 在坐墊金屬支架前端正中央，使用鑽頭鑽出一個 <strong>直徑 7.5 mm (Ø 7.5)</strong> 的通孔。</div>
+<div class="num-item"><strong>•</strong> 將掛包勾件由上方穿入，下側依序裝入平華司、彈簧防鬆墊圈與專用螺帽緊固。</div>
+<div class="num-item"><strong>•</strong> 重新裝回中央支撐大彈簧，即完成原廠規格之斜板置物勾安裝。</div>
+<hr/>
+<h2 id="第四部分手冊原廠料號索引速查IndexGuide">🔍 第四部分：手冊原廠料號索引速查 (Index Guide)</h2>
+<blockquote>對應原廠第 35 ~ 37 頁 (Page 35-37)</blockquote>
+<ul>
+<li><strong>標準件 (S. 開頭)</strong>：</li>
+<li><code>S. 480</code>：汽缸雙頭天柱螺栓 (第 2 頁)</li>
+<li><code>S. 1107</code>：M7 六角螺母 (第 2、5、14 頁)</li>
+<li><code>S. 3057</code>：標準平華司 (第 2、15、32 頁)</li>
+<li><code>S. 3107</code>：彈簧防鬆華司 (第 2、5、14 頁)</li>
+<li><code>S. 7125</code>：曲軸傳動側 6303 培林 (第 4 頁)</li>
+<li><code>S. 7160</code>：曲軸飛輪側 6204 培林 (第 2 頁)</li>
+<li><code>S. 8720</code>：曲軸飛輪油封 19x32x7 (第 2 頁)</li>
+<li><code>S. 8731</code>：曲軸傳動油封 22.7x47x7 (第 2 頁)</li>
+<li><code>S. 8735</code>：後輪軸輸出油封 27x47x6 (第 13 頁)</li>
+<li><strong>Vespa 90 核心專用號</strong>：</li>
+<li><code>78330</code>：V9A1 專用曲軸 (行程 51mm)</li>
+<li><code>78338</code>：V9A1 47mm 標準活塞環</li>
+<li><code>79957</code>：V9A1 鋁合金汽缸頭</li>
+<li><code>98151</code>：V9A1 47mm 活塞連銷組</li>
+<li><code>98363</code>：V9A1 專用 6V 磁石飛輪</li>
+<li><code>98375</code>：V9A1 88.5cc 汽缸活塞套件</li>
+<li><code>98430</code>：Dell'Orto SHB 16/16 化油器</li>
+</ul>
+    
+    <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 0.8rem; color: var(--text-muted); text-align: center;">
+      Piaggio Vespa 90 (V9A1T) 繁體中文對照維修技術庫 • 適用於各瀏覽器離線查閱
+    </div>
+  </div>
+
+  <script>
+    function filterTable() {
+      const query = document.getElementById('searchBox').value.toLowerCase().trim();
+      const rows = document.querySelectorAll('table.parts-table tbody tr');
+      rows.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        row.style.display = text.includes(query) ? '' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
